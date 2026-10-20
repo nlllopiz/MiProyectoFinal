@@ -1,0 +1,25 @@
+[
+    {
+        "id": 1,
+        "nombre": "Valentina Zuccardi",
+        "email": "vfernandez@gmail.com",
+        "puesto": "CEO",
+        "foto": "../images/equipo/avatar1.png"
+    },
+    {
+        "id": 2,
+        "nombre": "Martín Bianchi",
+        "email": "jperez@gmail.com",
+        "puesto": "Desarrollador",
+        "foto": "../images/equipo/avatar2.png"
+    },
+    {
+        "id": 3,
+        "nombre": "Camila Catena",
+        "email": "jperez@gmail.com",
+        "puesto": "Marketing",
+        "foto": "../images/equipo/avatar3.png"
+    }
+]
+ 
+ 

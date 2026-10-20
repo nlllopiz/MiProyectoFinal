@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu0dPJ0B5XRP6XJPZdZVN9o5EFOssig46PGra6Muz9GQ&s=10",
+        "nombre": "Malbec Reserva",
+        "descripcion": "Vino tinto de color rojo profundo, con aromas a ciruela, mora y un sutil toque de vainilla. En boca es intenso, equilibrado y de final persistente. Ideal para acompañar carnes rojas y quesos madurados.",
+        "precio": 18500,
+        "stock": 19,
+        "oferta": true
+    },
+    {
+        "id": 2,
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR71iu4EnjhGlPolQu00fkyBNYvgVhvc5cI2YcyZ36a-Q&s=10",
+        "nombre": "Cabernet Sauvignon",
+        "descripcion": "Tinto de gran estructura, con notas de cassis, pimiento y especias. Sus taninos firmes y su final elegante lo convierten en el compañero ideal de asados y platos con salsas intensas.",
+        "precio": 22000,
+        "stock": 22,
+        "oferta": false
+    },
+    {
+        "id": 3,
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRezld3dbX8wZPAH5qmd3auLB-TTd0Ya1q1icvWcroTTQ&s=10",
+        "nombre": "Chardonnay",
+        "descripcion": "Vino blanco fresco y aromático, con notas de manzana verde, cítricos y un leve recuerdo a manteca. De textura suave y final limpio, es perfecto para pescados, aves y mariscos.",
+        "precio": 16000,
+        "stock": 15,
+        "oferta": false
+    }
+]

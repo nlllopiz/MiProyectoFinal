@@ -1,0 +1,24 @@
+.footer {
+  background-color: var(--color-bordo-oscuro);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 50px;
+}
+
+.titulo {
+  color: var(--color-dorado);
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.texto {
+  color: #e8dfd2;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.copyright {
+  color: #aaa;
+  font-size: 12px;
+}

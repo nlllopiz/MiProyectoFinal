@@ -1,0 +1,28 @@
+.encabezado {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.encabezado h1 {
+    color: var(--color-bordo-oscuro);
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.encabezado p {
+    max-width: 680px;
+    margin: 0 auto;
+
+    color: var(--color-texto-secundario);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}

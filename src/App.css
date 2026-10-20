@@ -1,0 +1,205 @@
+.bienvenida {
+  max-width: 800px;
+
+  margin: 0 auto 45px;
+
+  text-align: center;
+}
+
+.etiqueta {
+  color: var(--color-dorado);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 10px;
+
+  margin-top: 50px;
+}
+
+.bienvenida h2 {
+  color: var(--color-bordo-oscuro);
+
+  font-size: 48px;
+
+  margin-bottom: 10px;
+}
+
+.bienvenida p:last-child {
+  color: var(--color-texto-secundario);
+
+  font-size: 15px;
+}
+
+
+.productos {
+  max-width: 1000px;
+
+  margin: 0 auto;
+}
+
+
+.pagina {
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  padding: 50px 20px 0;
+}
+
+.tituloPagina {
+  color: var(--color-bordo-oscuro);
+
+  font-size: 48px;
+
+  margin-bottom: 15px;
+}
+
+.descripcionPagina {
+  max-width: 760px;
+
+  margin-bottom: 40px;
+
+  color: var(--color-texto-secundario);
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+.contactoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 30px;
+
+  margin-top: 40px;
+}
+
+.datosContacto,
+.formularioContacto {
+  padding: 30px;
+
+  background-color: var(--color-superficie);
+
+  border: 1px solid #e5dfd2;
+  border-radius: 8px;
+
+  box-shadow: 0 3px 10px rgba(59, 17, 29, 0.08);
+}
+
+.datoContacto {
+  margin-bottom: 22px;
+}
+
+.datoContacto:last-child {
+  margin-bottom: 0;
+}
+
+.datoContacto h3 {
+  margin-bottom: 5px;
+
+  color: var(--color-bordo);
+
+  font-size: 22px;
+}
+
+.datoContacto p {
+  color: var(--color-texto-secundario);
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  margin-bottom: 18px;
+}
+
+.campo label {
+  color: var(--color-bordo-oscuro);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+
+  padding: 12px;
+
+  background-color: white;
+
+  border: 1px solid #e5dfd2;
+  border-radius: 5px;
+
+  font-family: var(--fuente-texto);
+  font-size: 14px;
+
+  resize: vertical;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  outline: 2px solid var(--color-dorado);
+  outline-offset: 1px;
+}
+
+.botonPrincipal {
+  display: inline-block;
+
+  padding: 12px 24px;
+
+  background-color: var(--color-bordo);
+  color: white;
+
+  border: none;
+  border-radius: 5px;
+
+  font-family: var(--fuente-texto);
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+.botonPrincipal:hover {
+  background-color: var(--color-bordo-oscuro);
+}
+
+.mensajeExito {
+  margin-top: 16px;
+
+  color: var(--color-bordo);
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+.paginaCentrada {
+  text-align: center;
+}
+
+.paginaCentrada .descripcionPagina {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+@media (max-width: 760px) {
+  .contactoGrid {
+    grid-template-columns: 1fr;
+  }
+}
