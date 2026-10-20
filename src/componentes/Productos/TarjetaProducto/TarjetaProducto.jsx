@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useCart } from "../../../context/CartContext";
 
 import SelectorCantidad from "../SelectorCantidad/SelectorCantidad";
+import LeyendaCarrito from "../LeyendaCarrito/LeyendaCarrito";
 
 import styles from "./TarjetaProducto.module.css";
 
@@ -35,6 +36,13 @@ function TarjetaProducto({ id, imagen, nombre, precio, stock }) {
           ${precio.toLocaleString("es-AR")}
         </p>
 
+        <Link
+          to={`/vinos/${id}`}
+          className={styles.botonDetalle}
+        >
+          Ver detalle
+        </Link>
+
         <SelectorCantidad
           id={id}
           stock={stock}
@@ -51,12 +59,7 @@ function TarjetaProducto({ id, imagen, nombre, precio, stock }) {
           Agregar al carrito
         </button>
 
-        <Link
-          to={`/vinos/${id}`}
-          className={styles.botonDetalle}
-        >
-          Ver detalle
-        </Link>
+        <LeyendaCarrito productoId={id} />
 
       </div>
 

@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
 
 import SelectorCantidad from "../../componentes/Productos/SelectorCantidad/SelectorCantidad";
+import LeyendaCarrito from "../../componentes/Productos/LeyendaCarrito/LeyendaCarrito";
 
 import styles from "./ProductoDetalle.module.css";
 
@@ -166,6 +167,8 @@ function ProductoDetalle() {
                     >
                         Agregar al carrito
                     </button>
+
+                    <LeyendaCarrito productoId={producto.id} />
 
                 </div>
 

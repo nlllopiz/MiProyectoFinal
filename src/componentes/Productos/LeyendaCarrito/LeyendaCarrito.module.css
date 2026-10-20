@@ -1,0 +1,16 @@
+.leyenda {
+    min-height: 36px;
+
+    margin-top: 10px;
+
+    color: var(--color-texto-secundario);
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.conProductos {
+    color: var(--color-bordo);
+
+    font-weight: 600;
+}
