@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
+import SelectorCantidad from "../../componentes/Productos/SelectorCantidad/SelectorCantidad";
+
 import styles from "./ProductoDetalle.module.css";
 
 function ProductoDetalle() {
@@ -143,6 +145,11 @@ function ProductoDetalle() {
                             <strong>{producto.oferta ? "Sí" : "No"}</strong>
                         </li>
                     </ul>
+
+                    <SelectorCantidad
+                        id={producto.id}
+                        stock={producto.stock}
+                    />
 
                     <button type="button" className={styles.botonCarrito}>
                         Agregar al carrito

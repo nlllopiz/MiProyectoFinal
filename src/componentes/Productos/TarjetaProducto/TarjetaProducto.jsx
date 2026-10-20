@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+import SelectorCantidad from "../SelectorCantidad/SelectorCantidad";
+
 import styles from "./TarjetaProducto.module.css";
 
 function TarjetaProducto({ id, imagen, nombre, precio, stock }) {
@@ -22,9 +24,7 @@ function TarjetaProducto({ id, imagen, nombre, precio, stock }) {
           ${precio.toLocaleString("es-AR")}
         </p>
 
-        <p className={styles.stock}>
-          Stock: {stock}
-        </p>
+        <SelectorCantidad id={id} stock={stock} />
 
         <button className={styles.boton}>
           Agregar al carrito
