@@ -1,4 +1,7 @@
 import { NavLink } from "react-router-dom";
+
+import CartWidget from "../CartWidget/CartWidget";
+
 import styles from "./Header.module.css";
 
 const claseEnlace = ({ isActive }) =>
@@ -37,9 +40,7 @@ function Header() {
             Contacto
           </NavLink>
 
-          {/*<a href="#" className={styles.carrito}>
-            🛒 Carrito
-          </a>*/}
+          <CartWidget />
         </nav>
 
       </div>

@@ -1,10 +1,21 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+
+import { useCart } from "../../../context/CartContext";
 
 import SelectorCantidad from "../SelectorCantidad/SelectorCantidad";
 
 import styles from "./TarjetaProducto.module.css";
 
 function TarjetaProducto({ id, imagen, nombre, precio, stock }) {
+  const [cantidad, setCantidad] = useState(1);
+
+  const { addToCart } = useCart();
+
+  const agregarAlCarrito = () => {
+    addToCart({ id, imagen, nombre, precio, stock }, cantidad);
+  };
+
   return (
     <article className={styles.tarjeta}>
 
@@ -24,9 +35,19 @@ function TarjetaProducto({ id, imagen, nombre, precio, stock }) {
           ${precio.toLocaleString("es-AR")}
         </p>
 
-        <SelectorCantidad id={id} stock={stock} />
+        <SelectorCantidad
+          id={id}
+          stock={stock}
+          cantidad={cantidad}
+          onCantidadChange={setCantidad}
+        />
 
-        <button className={styles.boton}>
+        <button
+          type="button"
+          className={styles.boton}
+          onClick={agregarAlCarrito}
+          disabled={stock <= 0}
+        >
           Agregar al carrito
         </button>
 

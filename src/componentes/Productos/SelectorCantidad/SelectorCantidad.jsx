@@ -1,20 +1,16 @@
-import { useState } from "react";
-
 import styles from "./SelectorCantidad.module.css";
 
-function SelectorCantidad({ id, stock }) {
-    const [cantidad, setCantidad] = useState(1);
-
+function SelectorCantidad({ id, stock, cantidad, onCantidadChange }) {
     if (stock <= 0) {
         return <p className={styles.sinStock}>Sin stock</p>;
     }
 
     const disminuir = () => {
-        setCantidad((actual) => Math.max(1, actual - 1));
+        onCantidadChange(Math.max(1, cantidad - 1));
     };
 
     const aumentar = () => {
-        setCantidad((actual) => Math.min(stock, actual + 1));
+        onCantidadChange(Math.min(stock, cantidad + 1));
     };
 
     const manejarCambio = (evento) => {
@@ -24,7 +20,7 @@ function SelectorCantidad({ id, stock }) {
             return;
         }
 
-        setCantidad(Math.min(Math.max(1, valor), stock));
+        onCantidadChange(Math.min(Math.max(1, valor), stock));
     };
 
     return (

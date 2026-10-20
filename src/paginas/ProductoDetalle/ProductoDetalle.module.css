@@ -133,8 +133,14 @@
     cursor: pointer;
 }
 
-.botonCarrito:hover {
+.botonCarrito:hover:not(:disabled) {
     background-color: var(--color-bordo-oscuro);
+}
+
+.botonCarrito:disabled {
+    background-color: #b9aaa4;
+
+    cursor: not-allowed;
 }
 
 @media (max-width: 760px) {

@@ -9,6 +9,7 @@ import Vinos from "./paginas/Vinos/Vinos";
 import ProductoDetalle from "./paginas/ProductoDetalle/ProductoDetalle";
 import Nosotros from "./paginas/Nosotros/Nosotros";
 import Contacto from "./paginas/Contacto/Contacto";
+import Carrito from "./paginas/Carrito/Carrito";
 import NoEncontrada from "./paginas/NoEncontrada/NoEncontrada";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="vinos/:id" element={<ProductoDetalle />} />
         <Route path="nosotros" element={<Nosotros />} />
         <Route path="contacto" element={<Contacto />} />
+        <Route path="carrito" element={<Carrito />} />
         <Route path="*" element={<NoEncontrada />} />
       </Route>
     </Routes>

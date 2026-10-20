@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
+import { useCart } from "../../context/CartContext";
+
 import SelectorCantidad from "../../componentes/Productos/SelectorCantidad/SelectorCantidad";
 
 import styles from "./ProductoDetalle.module.css";
@@ -8,7 +10,10 @@ import styles from "./ProductoDetalle.module.css";
 function ProductoDetalle() {
     const { id } = useParams();
 
+    const { addToCart } = useCart();
+
     const [producto, setProducto] = useState(null);
+    const [cantidad, setCantidad] = useState(1);
     const [cargando, setCargando] = useState(true);
     const [error, setError] = useState(null);
 
@@ -149,9 +154,16 @@ function ProductoDetalle() {
                     <SelectorCantidad
                         id={producto.id}
                         stock={producto.stock}
+                        cantidad={cantidad}
+                        onCantidadChange={setCantidad}
                     />
 
-                    <button type="button" className={styles.botonCarrito}>
+                    <button
+                        type="button"
+                        className={styles.botonCarrito}
+                        onClick={() => addToCart(producto, cantidad)}
+                        disabled={producto.stock <= 0}
+                    >
                         Agregar al carrito
                     </button>
 
