@@ -22,7 +22,7 @@ function Inicio() {
             <section className="productos">
 
                 <ProductosContainer
-                    mensaje="Vinos en oferta"
+                    mensaje="25% OFF"
                     soloOfertas
                 />
 

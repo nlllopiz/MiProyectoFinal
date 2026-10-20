@@ -29,7 +29,7 @@ function Header() {
           </NavLink>
 
           <NavLink to="/vinos" className={claseEnlace}>
-            Vinos
+            Nuestros Vinos
           </NavLink>
 
           <NavLink to="/nosotros" className={claseEnlace}>
