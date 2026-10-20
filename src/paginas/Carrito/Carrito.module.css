@@ -46,12 +46,72 @@
     font-size: 24px;
 }
 
-.precioUnitario,
-.cantidad {
+.precioUnitario {
     color: var(--color-texto-secundario);
 
     font-size: 13px;
     line-height: 1.6;
+}
+
+.cantidad {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 8px;
+
+    color: var(--color-texto-secundario);
+
+    font-size: 13px;
+}
+
+.controles {
+    display: inline-flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background-color: white;
+
+    border: 1px solid #e5dfd2;
+    border-radius: 5px;
+}
+
+.controles button {
+    width: 30px;
+    height: 30px;
+
+    background-color: var(--color-fondo);
+    color: var(--color-bordo-oscuro);
+
+    border: none;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.controles button:hover:not(:disabled) {
+    background-color: var(--color-dorado);
+}
+
+.controles button:disabled {
+    color: #c4bdb4;
+
+    cursor: not-allowed;
+}
+
+.valorCantidad {
+    min-width: 34px;
+
+    color: var(--color-texto);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-align: center;
 }
 
 .derecha {

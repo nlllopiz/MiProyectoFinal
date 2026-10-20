@@ -50,6 +50,32 @@ function CartProvider({ children }) {
         });
     };
 
+    const increaseQuantity = (id) => {
+        setCart((actual) =>
+            actual.map((item) =>
+                item.id === id
+                    ? {
+                        ...item,
+                        cantidad: Math.min(item.cantidad + 1, item.stock)
+                    }
+                    : item
+            )
+        );
+    };
+
+    const decreaseQuantity = (id) => {
+        setCart((actual) =>
+            actual.map((item) =>
+                item.id === id
+                    ? {
+                        ...item,
+                        cantidad: Math.max(1, item.cantidad - 1)
+                    }
+                    : item
+            )
+        );
+    };
+
     const removeItem = (id) => {
         setCart((actual) => actual.filter((item) => item.id !== id));
     };
@@ -73,6 +99,8 @@ function CartProvider({ children }) {
             value={{
                 cart,
                 addToCart,
+                increaseQuantity,
+                decreaseQuantity,
                 removeItem,
                 clearCart,
                 totalItems,

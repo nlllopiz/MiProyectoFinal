@@ -7,6 +7,8 @@ import styles from "./Carrito.module.css";
 function Carrito() {
     const {
         cart,
+        increaseQuantity,
+        decreaseQuantity,
         removeItem,
         clearCart,
         totalItems,
@@ -73,9 +75,33 @@ function Carrito() {
                                     ${item.precio.toLocaleString("es-AR")} c/u
                                 </p>
 
-                                <p className={styles.cantidad}>
-                                    Cantidad: {item.cantidad}
-                                </p>
+                                <div className={styles.cantidad}>
+                                    <span>Cantidad:</span>
+
+                                    <div className={styles.controles}>
+                                        <button
+                                            type="button"
+                                            onClick={() => decreaseQuantity(item.id)}
+                                            disabled={item.cantidad <= 1}
+                                            aria-label={`Disminuir cantidad de ${item.nombre}`}
+                                        >
+                                            −
+                                        </button>
+
+                                        <span className={styles.valorCantidad}>
+                                            {item.cantidad}
+                                        </span>
+
+                                        <button
+                                            type="button"
+                                            onClick={() => increaseQuantity(item.id)}
+                                            disabled={item.cantidad >= item.stock}
+                                            aria-label={`Aumentar cantidad de ${item.nombre}`}
+                                        >
+                                            +
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
 
                             <div className={styles.derecha}>

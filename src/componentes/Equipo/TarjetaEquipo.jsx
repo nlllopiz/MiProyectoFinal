@@ -7,7 +7,7 @@ function TarjetaEquipo({ nombre, email, puesto, foto }) {
       <img
         className={styles.imagen}
         src={foto}
-        alt={nombre}
+        alt={`Foto de ${nombre}`}
       />
 
       <div className={styles.contenido}>
@@ -16,13 +16,16 @@ function TarjetaEquipo({ nombre, email, puesto, foto }) {
           {nombre}
         </h3>
 
-        <p className={styles.precio}>
+        <p className={styles.puesto}>
           {puesto}
         </p>
 
-        <p className={styles.stock}>
+        <a
+          className={styles.email}
+          href={`mailto:${email}`}
+        >
           {email}
-        </p>
+        </a>
 
       </div>
 
