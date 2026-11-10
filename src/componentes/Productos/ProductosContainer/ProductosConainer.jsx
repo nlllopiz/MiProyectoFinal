@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import ProductosList from "../ProductosList/ProductosList";
 
+import { obtenerProductos } from "../../../firestore/productos";
+ 
 function ProductosContainer({
     mensaje = "Nuestros vinos",
     descripcion,
@@ -11,15 +13,9 @@ function ProductosContainer({
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        const obtenerProductos = async () => {
+        const obtenerProductosDeFirestore = async () => {
             try {
-                const respuesta = await fetch("/data/productos.json");
-
-                if (!respuesta.ok) {
-                    throw new Error("No se pudo cargar la información de los productos");
-                }
-
-                const datos = await respuesta.json();
+                const datos = await obtenerProductos();
                 setProductos(datos);
             } catch (error) {
                 setError(error.message);
@@ -28,7 +24,7 @@ function ProductosContainer({
             }
         };
 
-        obtenerProductos();
+        obtenerProductosDeFirestore();
     }, []);
 
     if (cargando) {

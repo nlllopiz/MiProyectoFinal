@@ -6,6 +6,8 @@ import { useCart } from "../../context/CartContext";
 import SelectorCantidad from "../../componentes/Productos/SelectorCantidad/SelectorCantidad";
 import LeyendaCarrito from "../../componentes/Productos/LeyendaCarrito/LeyendaCarrito";
 
+import { obtenerProductoPorId } from "../../firestore/productos";
+
 import styles from "./ProductoDetalle.module.css";
 
 function ProductoDetalle() {
@@ -26,17 +28,7 @@ function ProductoDetalle() {
                 setCargando(true);
                 setError(null);
 
-                const respuesta = await fetch("/data/productos.json");
-
-                if (!respuesta.ok) {
-                    throw new Error("No se pudo cargar la información del producto");
-                }
-
-                const productos = await respuesta.json();
-
-                const productoEncontrado = productos.find(
-                    (item) => String(item.id) === id
-                );
+                const productoEncontrado = await obtenerProductoPorId(id);
 
                 if (!productoEncontrado) {
                     throw new Error("No se encontró el producto solicitado");
@@ -130,11 +122,7 @@ function ProductoDetalle() {
                         {producto.descripcion}
                     </p>
 
-                    <ul className={styles.datos}>
-                        <li>
-                            <span>ID</span>
-                            <strong>{producto.id}</strong>
-                        </li>
+                    <ul className={styles.datos}>                        
 
                         <li>
                             <span>Precio</span>

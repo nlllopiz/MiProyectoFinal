@@ -10,6 +10,7 @@ import ProductoDetalle from "./paginas/ProductoDetalle/ProductoDetalle";
 import Nosotros from "./paginas/Nosotros/Nosotros";
 import Contacto from "./paginas/Contacto/Contacto";
 import Carrito from "./paginas/Carrito/Carrito";
+import Nuevo from "./paginas/Nuevo/Nuevo";
 import NoEncontrada from "./paginas/NoEncontrada/NoEncontrada";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="nosotros" element={<Nosotros />} />
         <Route path="contacto" element={<Contacto />} />
         <Route path="carrito" element={<Carrito />} />
+        <Route path="nuevo" element={<Nuevo />} />
         <Route path="*" element={<NoEncontrada />} />
       </Route>
     </Routes>

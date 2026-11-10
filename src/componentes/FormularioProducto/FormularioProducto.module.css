@@ -1,0 +1,36 @@
+.formulario {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 560px;
+
+    margin: 35px 0 0;
+    padding: 30px;
+
+    background-color: var(--color-superficie);
+
+    border: 1px solid #e5dfd2;
+    border-radius: 8px;
+
+    box-shadow: 0 3px 10px rgba(59, 17, 29, 0.08);
+}
+
+.titulo {
+    margin-bottom: 24px;
+
+    color: var(--color-bordo-oscuro);
+
+    font-size: 30px;
+}
+
+.formulario button {
+    align-self: flex-start;
+}
+
+.formulario input[type="file"] {
+    padding: 10px;
+
+    background-color: white;
+
+    cursor: pointer;
+}

@@ -40,6 +40,10 @@ function Header() {
             Contacto
           </NavLink>
 
+          <NavLink to="/nuevo" className={claseEnlace}>
+            Nuevo
+          </NavLink>
+
           <CartWidget />
         </nav>
 
