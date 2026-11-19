@@ -52,3 +52,47 @@
   padding-bottom: 3px;
 }
 
+.cuenta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.usuario {
+  max-width: 150px;
+
+  overflow: hidden;
+
+  color: #e8dfd2;
+
+  font-size: 12px;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.botonSesion {
+  padding: 7px 10px;
+
+  background-color: transparent;
+  color: white;
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 4px;
+
+  font-family: var(--fuente-texto);
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.botonSesion:hover {
+  background-color: var(--color-dorado);
+  color: var(--color-bordo-oscuro);
+
+  border-color: var(--color-dorado);
+}
+

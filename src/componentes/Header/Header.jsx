@@ -1,4 +1,6 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+
+import { useAuth } from "../../context/AuthContext";
 
 import CartWidget from "../CartWidget/CartWidget";
 
@@ -8,6 +10,18 @@ const claseEnlace = ({ isActive }) =>
   isActive ? `${styles.enlace} ${styles.activo}` : styles.enlace;
 
 function Header() {
+  const { usuario, cargando, esAdmin, cerrarSesion } = useAuth();
+  const navigate = useNavigate();
+
+  const manejarCerrarSesion = async () => {
+    try {
+      await cerrarSesion();
+      navigate("/", { replace: true });
+    } catch (error) {
+      console.error("No se pudo cerrar la sesión:", error);
+    }
+  };
+
   return (
     <header className={styles.header}>
 
@@ -40,15 +54,44 @@ function Header() {
             Contacto
           </NavLink>
 
-          <NavLink to="/gestion" className={claseEnlace}>
-            Gestión de Productos
-          </NavLink>
+          {esAdmin && (
+            <>
+              <NavLink to="/gestion" className={claseEnlace}>
+                Gestión de Productos
+              </NavLink>
 
-          <NavLink to="/gestion-cupones" className={claseEnlace}>
-            Gestión de Cupones
-          </NavLink>
+              <NavLink to="/gestion-cupones" className={claseEnlace}>
+                Gestión de Cupones
+              </NavLink>
+            </>
+          )}
 
           <CartWidget />
+
+          {!cargando && (
+            usuario ? (
+              <div className={styles.cuenta}>
+                <span
+                  className={styles.usuario}
+                  title={usuario.email}
+                >
+                  {usuario.email}
+                </span>
+
+                <button
+                  type="button"
+                  className={styles.botonSesion}
+                  onClick={manejarCerrarSesion}
+                >
+                  Cerrar sesión
+                </button>
+              </div>
+            ) : (
+              <NavLink to="/login" className={claseEnlace}>
+                Iniciar sesión
+              </NavLink>
+            )
+          )}
         </nav>
 
       </div>

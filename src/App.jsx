@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
 import Layout from "./componentes/Layout/Layout";
+import RutaProtegida from "./componentes/RutaProtegida/RutaProtegida";
 
 import Inicio from "./paginas/Inicio/Inicio";
 import Vinos from "./paginas/Vinos/Vinos";
@@ -10,6 +11,7 @@ import ProductoDetalle from "./paginas/ProductoDetalle/ProductoDetalle";
 import Nosotros from "./paginas/Nosotros/Nosotros";
 import Contacto from "./paginas/Contacto/Contacto";
 import Carrito from "./paginas/Carrito/Carrito";
+import Login from "./paginas/Login/Login";
 import Gestion from "./paginas/Gestion/Gestion";
 import GestionCupones from "./paginas/GestionCupones/GestionCupones";
 import NoEncontrada from "./paginas/NoEncontrada/NoEncontrada";
@@ -24,8 +26,26 @@ function App() {
         <Route path="nosotros" element={<Nosotros />} />
         <Route path="contacto" element={<Contacto />} />
         <Route path="carrito" element={<Carrito />} />
-        <Route path="gestion" element={<Gestion />} />
-        <Route path="gestion-cupones" element={<GestionCupones />} />
+        <Route path="login" element={<Login />} />
+
+        <Route
+          path="gestion"
+          element={
+            <RutaProtegida soloAdmin>
+              <Gestion />
+            </RutaProtegida>
+          }
+        />
+
+        <Route
+          path="gestion-cupones"
+          element={
+            <RutaProtegida soloAdmin>
+              <GestionCupones />
+            </RutaProtegida>
+          }
+        />
+
         <Route path="*" element={<NoEncontrada />} />
       </Route>
     </Routes>
