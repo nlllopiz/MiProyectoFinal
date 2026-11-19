@@ -44,6 +44,10 @@ function Header() {
             Gestión de Productos
           </NavLink>
 
+          <NavLink to="/gestion-cupones" className={claseEnlace}>
+            Gestión de Cupones
+          </NavLink>
+
           <CartWidget />
         </nav>
 

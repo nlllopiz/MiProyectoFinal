@@ -11,6 +11,7 @@ import Nosotros from "./paginas/Nosotros/Nosotros";
 import Contacto from "./paginas/Contacto/Contacto";
 import Carrito from "./paginas/Carrito/Carrito";
 import Gestion from "./paginas/Gestion/Gestion";
+import GestionCupones from "./paginas/GestionCupones/GestionCupones";
 import NoEncontrada from "./paginas/NoEncontrada/NoEncontrada";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="contacto" element={<Contacto />} />
         <Route path="carrito" element={<Carrito />} />
         <Route path="gestion" element={<Gestion />} />
+        <Route path="gestion-cupones" element={<GestionCupones />} />
         <Route path="*" element={<NoEncontrada />} />
       </Route>
     </Routes>
