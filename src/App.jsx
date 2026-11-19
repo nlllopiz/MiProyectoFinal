@@ -10,7 +10,7 @@ import ProductoDetalle from "./paginas/ProductoDetalle/ProductoDetalle";
 import Nosotros from "./paginas/Nosotros/Nosotros";
 import Contacto from "./paginas/Contacto/Contacto";
 import Carrito from "./paginas/Carrito/Carrito";
-import Gestion from "./componentes/Gestion/Gestion";
+import Gestion from "./paginas/Gestion/Gestion";
 import NoEncontrada from "./paginas/NoEncontrada/NoEncontrada";
 
 function App() {

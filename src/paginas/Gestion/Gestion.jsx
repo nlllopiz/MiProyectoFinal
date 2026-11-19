@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
-import FormularioProducto from "../FormularioProducto/FormularioProducto";
-import ListadoProductos from "../ListadoProductos/ListadoProductos";
+import FormularioProducto from "../../componentes/FormularioProducto/FormularioProducto";
+import ListadoProductos from "../../componentes/ListadoProductos/ListadoProductos";
 
 import {
     actualizarProducto,
