@@ -40,8 +40,8 @@ function Header() {
             Contacto
           </NavLink>
 
-          <NavLink to="/nuevo" className={claseEnlace}>
-            Nuevo
+          <NavLink to="/gestion" className={claseEnlace}>
+            Gestión de Productos
           </NavLink>
 
           <CartWidget />

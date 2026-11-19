@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import ProductosList from "../ProductosList/ProductosList";
 
-import { obtenerProductos } from "../../../firestore/productos";
- 
+import { obtenerProductos } from "../../../services/productosService";
+
 function ProductosContainer({
     mensaje = "Nuestros vinos",
     descripcion,
@@ -22,7 +22,7 @@ function ProductosContainer({
             } finally {
                 setCargando(false);
             }
-        };
+        }; 
 
         obtenerProductosDeFirestore();
     }, []);

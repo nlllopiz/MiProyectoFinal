@@ -1,0 +1,28 @@
+.formulario {
+    scroll-margin-top: 30px;
+}
+
+.mensaje {
+    margin-bottom: 22px;
+    padding: 12px 16px;
+
+    border: 1px solid;
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.exito {
+    background-color: #f2f8ee;
+    color: #2f6b2f;
+
+    border-color: #cfe5c2;
+}
+
+.error {
+    background-color: #fbefef;
+    color: #8b1e1e;
+
+    border-color: #eccdcd;
+}

@@ -6,7 +6,7 @@ import { useCart } from "../../context/CartContext";
 import SelectorCantidad from "../../componentes/Productos/SelectorCantidad/SelectorCantidad";
 import LeyendaCarrito from "../../componentes/Productos/LeyendaCarrito/LeyendaCarrito";
 
-import { obtenerProductoPorId } from "../../firestore/productos";
+import { obtenerProductoPorId } from "../../services/productosService";
 
 import styles from "./ProductoDetalle.module.css";
 
